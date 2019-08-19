@@ -20,12 +20,12 @@ project('sqdlist', 'c',
     meson_version   : '>=0.50.0',
     default_options : 
     [ 
+        'buildtype=release',
+        'b_lundef=true',
         'werror=true',
-        'optimization=3', 
-        'warning_level=3', 
-        'b_sanitize=address,undefined', 
-        'b_lto=true', 
-        'b_lundef=true'
+        'optimization=3',
+        'warning_level=3',
+        'c_std=c11'
     ])
 cc = meson.get_compiler('c')
 args_for_langs = 'c'
